@@ -27,23 +27,36 @@ class MyApp extends StatelessWidget {
           accentColor: Colors.amber,
           // errorColor: Colors.red,
           fontFamily: 'Quicksand',
-          textTheme: ThemeData.light().textTheme.copyWith(
+          // textTheme: ThemeData.light().textTheme.copyWith(
+          //       titleSmall: TextStyle(
+          //         fontFamily: 'OpenSans',
+          //         fontWeight: FontWeight.bold,
+          //         fontSize: 18,
+          //       ),
+          //       button: TextStyle(color: Colors.white),
+          //     ),
+          textTheme: Theme.of(context).textTheme.copyWith(
                 titleSmall: TextStyle(
                   fontFamily: 'OpenSans',
                   fontWeight: FontWeight.bold,
                   fontSize: 18,
                 ),
-                button: TextStyle(color: Colors.white),
               ),
           appBarTheme: AppBarTheme(
-            textTheme: ThemeData.light().textTheme.copyWith(
-                  titleSmall: TextStyle(
-                    fontFamily: 'OpenSans',
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-          )),
+              titleTextStyle: TextStyle(
+            fontFamily: 'OpenSans',
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          )
+              //  Theme.of(context).textTheme.copyWith(
+              //       titleSmall: TextStyle(
+              //         fontFamily: 'OpenSans',
+              //         fontSize: 20,
+              //         fontWeight: FontWeight.bold,
+              //       ),
+              //     ),
+              //
+              )),
       home: MyHomePage(),
     );
   }
